@@ -1,0 +1,142 @@
+
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+
+    </head>
+    <body>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <p>What	is	the	correct	JavaScript	syntax	to	write “Hello World" to the	HTML	output stream?</p>
+
+        <pre class="prettyprint lang-js">
+        document.write("Jello World");
+        </pre>
+        <script>
+            document.write("Jello World");
+        </script>
+        <hr />
+        <p>
+            What	is	the	correct	JavaScript	syntax	to	write	“Hello	World"	in	an	alert box?
+        </p>
+        <pre class="prettyprint">
+            alert("Hello World");
+        </pre>
+        <button onclick="alert('Hello World');"> Click Me </button>
+        <hr />
+        <p>What	is the correct JavaScript syntax to change	the	HTML of	an	element	with an	ID	of ‘result’ to ‘Error on Form!!’?</p>
+
+        <pre class ="prettyprint">
+            document.getElementById("result").innerHTML = "Error on Form";
+        </pre>
+        <p id="result"></p>
+        <script>
+        document.getElementById("result").innerHTML = "Error on Form";
+        </script>
+        <hr />
+        <p>Using a for loop	create	the	JavaScript	needed	to	output (HTML output	stream) the	ODD numbers	between	10 and 150. Note: Each number should be on a separate line.</p>
+
+        <pre class="prettyprint">
+                <xmp>
+                for( var x = 10; x < 150; x++)
+                {
+                    if( x % 2 == 1)
+                        document.write(x + "<br />");
+                }
+            </xmp>
+        </pre>
+
+            <script>
+            for( var x = 10; x < 150; x++)
+            {
+            if( x % 2 == 1)
+            document.write(x + "<br/>");
+            }
+            </script>
+    <hr />
+    <p>
+        Write	the	HTML,	CSS	and/or JS	needed	to	change	the	text	color	of	a	paragraph	to	
+any	color	(pick	one) when	the	user’s	mouse	is	over	an	element’s	text. The	color	
+should	change	back	once	the	user’s	mouse	is	no	longer	over	the	element.
+    </p>
+        <pre class="prettyprint">
+            <xmp>
+                <p onmouseover="this.style.color = 'red'" onmouseout="this.style.color='black'">Hello World</p>
+            </xmp>
+        </pre>
+
+        <p onmouseover="this.style.color = 'red'" onmouseout="this.style.color='black'">Hello World</p>
+
+        <hr />
+       <p> Consider	the	following	code	snippet.	Create	a JavaScript	function entitled	
+            ‘validateForm’ to	validate	that	text	has	been	entered	for	both	first	and	last	name	and	
+            that	the	user	is	21	or	older. If	no	text	is	entered	and/or	the	user	is	not 21 or	over
+            you	should	display	an	error	message (this	can	be	a	popup	or	a	message	written	in	
+            the	div	provided)	and	do	not	submit	the	form	to	the	action	page.
+        </p>
+        <pre class="prettyprint">
+            <xmp>
+        <div id="errorMsg"></div>
+        <form name="myFrm" onsubmit="return validateForm();" action="somepg.html">
+        <label>	
+		First Name: <input type="text" name="firstName"	id="firstName"	/>	
+        </label><br	/>
+        <label>	
+        Last Name:<input type="text" name="lastName" id="lastName"/> </label>	
+        <br	/>
+        <label>	
+        Age:  <input type="text" name="age" id="age"/></label><br/>
+        <input type="submit"/>
+        </form>
+        <script>
+            function validateForm()
+            {
+                var fName = document.forms["myFrm"]["firstName"].value;
+                var lName = document.forms["myFrm"]["lastName"].value;
+                var age = document.forms["myFrm"]["age"].value;
+
+                if( fName == "" || lName == "" || age == "" || age < 21)
+                {
+                    document.getElementById("errorMsg").innerHTML = "Invalid Data: User must be 21 or older";
+                    return false;
+                }
+                
+            }
+        </script>      
+    </xmp></pre>
+    <hr />
+    <p>
+        Create	a	function	that	will	take	in	3	arguments.	2	of	the	arguments	should	be	
+        numeric	and	the	other	should	be	a	math	operator	(+,	-,	*,	/,	or	%)	based	on	the	input	
+        you	should	return	the	answer	after	the	operation	is	performed	on	the	2	integers.	
+         
+    </p>
+    <pre class="prettyprint"><xmp>
+    <button onclick="calc(4,5,'*');"> Click Me </button>
+    <script>
+        function calc(x, y, op)
+        {
+            var num1 = parseInt(x);
+            var num2 = parseInt(y);
+
+            if(op == "+")
+            {
+                document.write(num1 + num2);
+            }
+            else if (op == "-")
+            {
+                document.write(num1 - num2);
+            }
+            else if (op == "*")
+            {
+                document.write(num1 * num2);
+            } 
+            else if (op == "/")
+            {
+                document.write(num1 / num2);
+            }           
+        }
+    </script>
+    </xmp></pre>
+    </body>
+</html>
