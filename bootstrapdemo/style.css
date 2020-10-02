@@ -3,6 +3,11 @@
     background-image: url(images/texture.jpg);
     color: white;
     margin: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.carousel-caption {
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #demo {
