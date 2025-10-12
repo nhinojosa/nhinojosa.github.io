@@ -1,0 +1,18 @@
+body {
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:ivory;
+}
+
+fieldset {
+    margin: 20px;
+}
+
+legend {
+    font-weight: bolder;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
