@@ -15,6 +15,7 @@ function countSenators() {
     }
     else {
         document.getElementById("quorum").innerHTML = "<h1 style='color: green'> Number for quorum: " + (22-checked) + " (met)</h1>";
+        document.body.classList.add("barrel_roll");
     }
 
 }

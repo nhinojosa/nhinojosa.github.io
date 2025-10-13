@@ -16,3 +16,7 @@ legend {
     grid-template-columns: auto auto;
 }
 
+.barrel_roll {
+    transition: transform 4s ease;
+    transform: rotate(360deg);
+}
