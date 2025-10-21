@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function scoreExam() {
+                var score = 0;
+                //Question 1
+                if(document.getElementById("question_1_a3").checked == true) {
+                    score = score + 1;
+                    document.getElementById("question_1_result").innerHTML = "Correct";
+                }
+                else
+                {
+                    document.getElementById("question_1_result").innerHTML = "Incorrect";
+                }
+
+                //Question 2 - use logical AND operator (&&)
+                if(document.getElementById("question_2_a2").checked == true && document.getElementById("question_2_a4").checked == true)
+                {
+                    score = score + 1;
+                    document.getElementById("question_2_result").innerHTML = "Correct";
+                }
+                else
+                {
+                    document.getElementById("question_2_result").innerHTML = "Incorrect";
+                }
+                //total score
+                document.getElementById("final_score").innerHTML = "Total Points: " + score;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Question 1: What is 2 + 2?</legend>
+                A) <input type="radio" id="question_1_a1" name="question_1" value="3">
+                    <label>3</label><br>
+                B) <input type="radio" id="question_1_a2" name="question_1" value="2">
+                    <label>2</label><br>
+                C) <input type="radio" id="question_1_a3" name="question_1" value="4">
+                    <label>4</label><br>
+                <div id="question_1_result">&nbsp;</div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question 2: Which values are even?</legend>
+                A) <input type="checkbox" id="question_2_a1" name="question_2_a1" value="23">
+                    <label>23</label><br>
+                B) <input type="checkbox" id="question_2_a2" name="question_2_a2" value="44">
+                    <label>44</label><br>
+                C) <input type="checkbox" id="question_2_a3" name="question_2_a3" value="45">
+                    <label>45</label><br>
+                D) <input type="checkbox" id="question_2_a4" name="question_2_a4" value="100">
+                    <label>100</label><br>
+                <div id="question_2_result">&nbsp;</div>
+            </fieldset>
+
+
+            <input type="button" class="button" onclick="scoreExam()" value="submit exam">
+            <div id="final_score">&nbsp;</div>
+        </form>
+    </body>
+</html>

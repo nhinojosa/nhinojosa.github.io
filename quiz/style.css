@@ -1,0 +1,18 @@
+form {
+    margin: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset {   
+    padding: 20px;
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: aqua;
+    margin-bottom: 20px;
+}
